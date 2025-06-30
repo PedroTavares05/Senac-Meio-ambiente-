@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EcoSenac - Pontos de Coleta</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Public+Sans:wght@400;500;700;900" />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <!-- Icone da aba-->
+     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20clip-path%3D%22url(%23clip0_6_535)%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M47.2426%2024L24%2047.2426L0.757355%2024L24%200.757355L47.2426%2024ZM12.2426%2021H35.7574L24%209.24264L12.2426%2021Z%22%20fill%3D%22%23111815%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_6_535%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E">
+
+    <style>
+      #map {
+        width: 100%;
+        height: 480px;
+        border-radius: 16px;
+        margin: 32px 0;
+      }
+      @media (max-width: 900px) {
+        #map {
+          height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-root">
+      <div class="layout-container">
+        <header class="main-header">
+          <div class="header-left">
+            <div class="logo-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_535)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="site-title">EcoSenac</h2>
+          </div>
+          <div class="header-right">
+            <nav class="main-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="Maps.html">Coleta</a>
+              <a href="#">Contact</a>
+            </nav>
+            <button class="globe-btn">
+              <span class="globe-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z"></path>
+                </svg>
+              </span>
+            </button>
+            <img class="profile-pic" src="imagens/01f2e675b569d50016a85dde17d906d2.jpg" alt="Perfil Yarlane" style="width:40px;height:40px;border-radius:50%;">
+          </div>
+        </header>
+        <main class="main-content">
+          <h1 class="section-title">Pontos de Coleta e ONGs no Espírito Santo</h1>
+          <p class="section-text">
+            Veja no mapa pontos de coleta de lixo eletrônico e ONGs ambientais no Espírito Santo.<br>
+            Clique nos marcadores para mais informações.
+          </p>
+          <div id="map"></div>
+        </main>
+        <footer class="main-footer">
+          <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Maps.html">Coleta</a>
+            <a href="#">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <a href="#" class="social-icon twitter"></a>
+            <a href="#" class="social-icon instagram"></a>
+            <a href="#" class="social-icon facebook"></a>
+          </div>
+          <p class="footer-copy">@2024 EcoSenac. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      function initMap() {
+        const esCenter = { lat: -20.3155, lng: -40.3128 }; // Vitória/ES
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: esCenter,
+        });
+
+        // Pontos de coleta e ONGs (exemplos reais e fictícios)
+        const locations = [
+          {
+            position: { lat: -20.3155, lng: -40.3128 },
+            title: "Ecoponto Vitória - Lixo Eletrônico",
+            info: "Av. Fernando Ferrari, 1960 - Vitória<br>Coleta de eletrônicos e pilhas.<br><a href='https://www.vitoria.es.gov.br' target='_blank'>Site</a>"
+          },
+          {
+            position: { lat: -20.3297, lng: -40.2925 },
+            title: "ONG Amar - Proteção Ambiental",
+            info: "Rua Aleixo Neto, 1700 - Praia do Canto, Vitória<br>ONG de educação ambiental.<br><a href='https://www.amar.org.br' target='_blank'>Site</a>"
+          },
+          {
+            position: { lat: -20.2649, lng: -40.4203 },
+            title: "Ecoponto Serra - Lixo Eletrônico",
+            info: "Av. Talma Rodrigues Ribeiro, 5416 - Serra<br>Coleta de eletrônicos.<br><a href='https://www.serra.es.gov.br' target='_blank'>Site</a>"
+          },
+          {
+            position: { lat: -20.3417, lng: -40.2875 },
+            title: "Instituto Últimos Refúgios",
+            info: "Rua Eugênio Netto, 980 - Praia do Canto, Vitória<br>ONG de proteção à fauna.<br><a href='https://www.ultimosrefugios.org.br' target='_blank'>Site</a>"
+          },
+          {
+            position: { lat: -20.3194, lng: -40.3382 },
+            title: "Ecoponto Vila Velha",
+            info: "Av. Carlos Lindenberg, 1680 - Vila Velha<br>Coleta de eletrônicos e recicláveis.<br><a href='https://www.vilavelha.es.gov.br' target='_blank'>Site</a>"
+          }
+        ];
+
+        locations.forEach(loc => {
+          const marker = new google.maps.Marker({
+            position: loc.position,
+            map,
+            title: loc.title,
+          });
+          const infowindow = new google.maps.InfoWindow({
+            content: `<strong>${loc.title}</strong><br>${loc.info}`
+          });
+          marker.addListener("click", () => {
+            infowindow.open(map, marker);
+          });
+        });
+      }
+    </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2iVmooKWkMdlOoeTuamCewUALmzdFaVU&callback=initMap"></script>
+  </body>
+</html>

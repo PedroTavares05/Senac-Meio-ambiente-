@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sangue Verde</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Public+Sans:wght@400;500;700;900" />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20clip-path%3D%22url(%23clip0_6_535)%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M47.2426%2024L24%2047.2426L0.757355%2024L24%200.757355L47.2426%2024ZM12.2426%2021H35.7574L24%209.24264L12.2426%2021Z%22%20fill%3D%22%23111815%22%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_6_535%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20fill%3D%22white%22%3E%3C/rect%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E">
+    <style>
+      .mavihh-pic {
+        transform: rotate(90deg);
+        object-fit: cover;
+      }
+      .maria-pic {
+        transform: rotate(0deg);
+        object-fit: cover;
+      }
+      .btn, .learn-more-btn, .btn-success {
+        background: #2e7d32;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 24px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 16px;
+        transition: background 0.2s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover, .learn-more-btn:hover, .btn-success:hover {
+        background: #256026;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-root">
+      <div class="layout-container">
+        <header class="main-header">
+          <div class="header-left">
+<div class="logo-icon">
+  <!-- SVG do logo antigo EcoSenac -->
+  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:32px;height:32px;">
+    <g clip-path="url(#clip0_6_535)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_6_535"><rect width="48" height="48" fill="white"></rect></clipPath>
+    </defs>
+  </svg>
+</div>
+            <h2 class="site-title">EcoSenac</h2>
+          </div>
+          <div class="header-right">
+            <nav class="main-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="Maps.html">Projects</a>
+              <a href="#">Contact</a>
+            </nav>
+            <button class="globe-btn">
+              <span class="globe-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z"></path>
+                </svg>
+              </span>
+            </button>
+            <img class="profile-pic" src="imagens/01f2e675b569d50016a85dde17d906d2.jpg" alt="Perfil Yarlane" style="width:40px;height:40px;border-radius:50%;">
+          </div>
+        </header>
+        <main class="main-content">
+          <section class="hero-section">
+            <div class="hero-content">
+              <h1>🌿 EcoSenac: Iniciativa Ambiental da Turma 342</h1>
+              <p>Um projeto estudantil dedicado a promover a sustentabilidade e a conscientização ambiental dentro da nossa comunidade.</p>
+              <button class="btn" onclick="document.getElementById('missao').scrollIntoView({behavior:'smooth'})">Saiba Mais</button>
+            </div>
+          </section>
+          <section>
+            <h2 id="missao">🎯 Nossa Missão</h2>
+            <p>
+              O projeto <strong>EcoSenac</strong> foi criado por alunos da <strong>Turma 342 do Senac</strong> com o propósito de contribuir para um futuro mais sustentável. Nossa missão é promover a conscientização ambiental dentro e fora do ambiente escolar, incentivando a coleta seletiva, o descarte correto de resíduos e o cuidado com os recursos naturais. Acreditamos que pequenas ações fazem grande diferença, e que a educação é a chave para transformar o mundo.
+            </p>
+          </section>
+          <section>
+            <h2>👥 Conheça a Equipe</h2>
+            <div class="team-grid">
+              <div class="team-member">
+                <img class="member-pic maria-pic" src="imagens/WhatsApp Image 2025-06-29 at 8.22.49 PM.jpeg" alt="Pedro Henrique" style="width:100px;height:100px;border-radius:50%;">
+                <div>
+                  <h3>💻 Pedro Henrique</h3>
+                  <p><em>Estudante do Senac</em></p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img class="member-pic mavihh-pic" src="imagens/WhatsApp Image 2025-06-29 at 8.09.18 PM.jpeg" alt="Maria Vitória" style="width:100px;height:100px;border-radius:50%;">
+                <div>
+                  <h3>👩‍🔬 Maria Vitória</h3>
+                  <p><em>Estudante do Senac</em></p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img class="member-pic" src="imagens/01f2e675b569d50016a85dde17d906d2.jpg" alt="Yarlane" style="width:100px;height:100px;border-radius:50%;">
+                <div>
+                  <h3>🌎 Yarlane</h3>
+                  <p><em>Estudante do Senac</em></p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="main-footer">
+          <nav class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <a href="#" class="social-icon twitter"></a>
+            <a href="#" class="social-icon instagram"></a>
+            <a href="#" class="social-icon facebook"></a>
+          </div>
+          <p class="footer-copy">@2024 EcoSenac. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
